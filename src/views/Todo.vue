@@ -1,7 +1,7 @@
 <template>
   <div class="p__todoList">
     <div class="todo-panel">
-      <todo-input :tools="true"></todo-input>
+      <todo-input></todo-input>
       <all-todo-list title="TO-DO" :todos="todosDoing"></all-todo-list>
       <all-todo-list title="DONE" :todos="todosCompleted"></all-todo-list>
     </div>
@@ -35,15 +35,10 @@ export default {
   justify-content: center;
   padding: 3rem 0;
   height: 100%;
-  @include spad-width {
-    height: initial;
-  }
   .todo-panel {
     width: 100%;
     max-width: 445px;
-    @include spad-width {
-      max-width: initial;
-    }
+    overflow: hidden;
   }
 }
 </style>

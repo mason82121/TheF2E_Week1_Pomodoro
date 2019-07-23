@@ -17,19 +17,22 @@
       </div>
       <div class="menu-title">POMODORO</div>
     </div>
+    <reciprocal-panel></reciprocal-panel>
   </div>
 </template>
 
 <script>
-export default {};
+import ReciprocalPanel from './ReciprocalPanel.vue';
+export default {
+  components: {
+    ReciprocalPanel
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 .p__home__right_menu_panel {
   width: $menu-panel-width;
-  @include pad-width {
-    width: px-to-vw($menu-panel-width, $pc-media);
-  }
   .menu-bar {
     padding: 48px 0;
     height: 100%;
@@ -39,12 +42,6 @@ export default {};
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    @include pad-width {
-      right: px-to-vw(85px, $pc-media);
-    }
-    @include spad-width {
-      display: none;
-    }
   }
   .icon_list {
     display: flex;
@@ -82,9 +79,6 @@ export default {};
     font-weight: bold;
     color: $second-color;
     writing-mode: vertical-lr
-  }
-  @include spad-width {
-    width: 0;
   }
 }
 </style>

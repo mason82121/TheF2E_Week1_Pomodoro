@@ -37,8 +37,5 @@
     color: $second-color;
     writing-mode: vertical-lr;
   }
-  @include spad-width {
-    display: none;
-  }
 }
 </style>

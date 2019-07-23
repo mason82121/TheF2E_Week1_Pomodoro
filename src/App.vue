@@ -7,7 +7,8 @@
 <style lang="scss">
 #app {
   width: 100%;
-  max-width: $pc-media;
+  min-width: 1280px;
+  max-width: $media-max-size;
   height: 100%;
   background-color: $primary-color;
   margin: 0 auto;

@@ -1,4 +1,4 @@
-@import '../all.scss';
+@import '../variable.scss';
 
 .container {
   width: 100%;
@@ -54,7 +54,7 @@
   .col-12{
     width: calc(100% / 12 * 12);
   }
-  @include pad-width {
+  @media screen and (max-width: $media-size-ipad) {
     .col-pad-1{
       width: calc(100% / 12);
     }
@@ -92,7 +92,7 @@
       width: calc(100% / 12 * 12);
     }
   }
-  @include phone-width {
+  @media screen and (max-width: $media-size-phone) {
     .col-phone-1{
       width: calc(100% / 12);
     }
