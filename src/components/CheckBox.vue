@@ -27,7 +27,7 @@
         default: 32
       },
       color: {
-        default: '#003164'
+        default: ''
       },
       value: {
         type: Boolean,
@@ -44,6 +44,9 @@
 
 <style lang="scss" scoped>
 .check-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   input {
     display: none;
     &:checked {
