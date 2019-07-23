@@ -1,5 +1,5 @@
 <template>
-  <div class="time_panel" :class="playMode">
+  <div class="top_panel" :class="playMode">
     <transition-group name="flip" class='mession-block'>
       <now-mession-bar :nowTodoID="$store.state.nowTodoID" :key="$store.state.nowTodoID"></now-mession-bar>
     </transition-group>
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.time_panel {
+.top_panel {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -41,9 +41,15 @@ export default {
     font-size: 11rem;
     font-weight: bold;
     color: $text-color;
+    @include pad-width {
+      font-size: px-to-vw(rem-to-px(11rem), $pc-media);
+    }
   }
   &.break .time_reciprocal{
     color: $second-text-color;
+  }
+  @include spad-width {
+    display: none;
   }
 }
 </style>
